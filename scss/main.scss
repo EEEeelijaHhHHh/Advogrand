@@ -304,4 +304,27 @@ body {
   }
 }
 
+/* Service Provision Section */
+.service-provision {
+  display: flex;
+  justify-content: space-between;
+  &-wrapper {
+    background-color: #f5f5f5;
+  }
+  &__item {
+    text-align: center;
+  }
+  &__img {
+    margin-bottom: 50px;
+  }
+  &__text {
+    color: #1c1c1c;
+    font-weight: 300;
+    line-height: (22 / 16);
+    &_bold {
+      font-weight: 700;
+    }
+  }
+}
+
 @import 'media';
