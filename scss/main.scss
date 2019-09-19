@@ -130,6 +130,10 @@ body {
 .section {
   padding: 100px 0;
 
+  &_lg {
+    padding-bottom: 200px;
+  }
+
   &__title {
     color: #1c1c1c;
     font-size: 30px;
@@ -143,6 +147,10 @@ body {
   &-title {
     margin: 0 0 80px 0;
     text-align: center;
+
+    &_left {
+      text-align: left;
+    }
   }
 }
 
@@ -489,6 +497,169 @@ body {
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* Prices Section */
+.prices {
+  background-color: #f5f5f5;
+
+  &__title {
+    margin: 0 0 40px 0;
+
+  }
+
+  &__text {
+    color: #313131;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: (25 / 18);
+    width: 630px;
+    margin: 0 0 50px 0;
+  }
+
+  &-choose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+
+    &__text {
+      flex: 1;
+      color: #313131;
+      font-weight: 300;
+    }
+
+    &__compare {
+      color: #313131;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-right: 15px;
+    }
+
+    &__btn {
+      width: 95px;
+      line-height: 35px;
+      color: #e42626;
+      text-transform: uppercase;
+      font-style: 14px;
+      border-radius: 5px;
+      border: 2px solid #e42626;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &-block {
+    display: flex;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #e8e8e8;
+      background-color: #ffffff;
+      padding: 50px 20px;
+      width: 33.3%;
+    }
+
+    &__title {
+      font-family: 'Muller', sans-serif;
+      color: #000000;
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+      margin: 0 0 30px 0;
+
+      &-for {
+        display: block;
+        font-weight: 700;
+      }
+    }
+
+    &__img {
+      margin-bottom: 40px;
+    }
+
+    &-table {
+      &-wrapper {
+        flex: 1;
+        padding-bottom: 50px;
+      }
+
+      &__info {
+        font-family: 'Muller', sans-serif;
+        color: #000000;
+        font-size: 11px;
+        font-weight: 300;
+        height: 40px;
+        width: 70%;
+
+        &_lg {
+          font-size: 13px;
+        }
+      }
+
+      &__count {
+        font-family: 'Muller', sans-serif;
+        text-align: right;
+        color: #000000;
+        font-size: 11px;
+        font-weight: 400;
+        height: 40px;
+      }
+    }
+
+    &__price {
+      &-title {
+        color: #000000;
+        font-family: 'Muller', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+
+      &-num {
+        color: #000000;
+        font-family: 'Muller', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-btn {
+      margin-bottom: 15px;
+    }
+
+    &__btn {
+      width: 200px;
+      height: 55px;
+      border-radius: 5px;
+      color: #fff;
+      font-family: 'Muller', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      background-color: #000000;
+
+      &_red {
+        background-image: linear-gradient(to top, #ff2e00 0%, #ff4c25 100%);
+      }
+
+      &_green {
+        background-image: linear-gradient(to top, #008e00 0%, #00a300 100%);
+      }
+
+      &_blue {
+        background-image: linear-gradient(to top, #001c67 0%, #02388f 100%);
+      }
+
+      &_gray {
+        background-color: #9a9a9a;
       }
     }
   }
