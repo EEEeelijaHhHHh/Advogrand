@@ -57,8 +57,9 @@ body {
       font-weight: 300;
       text-decoration: none;
       transition: all .2s ease-in;
+      outline: none;
 
-      &:hover {
+      &:hover, &:focus {
         color: #e61010;
       }
     }
@@ -70,7 +71,6 @@ body {
 
   &__btn {
     color: #fff;
-    font-family: "Proxima Nova";
     font-size: 12px;
     font-weight: 700;
     line-height: 22px;
@@ -78,8 +78,16 @@ body {
     height: 30px;
     border-radius: 5px;
     background-color: #c91111;
-    border: none;
+    border: solid 1px #c91111;
     cursor: pointer;
+    transition: all .2s ease-in;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: #c91111;
+    }
   }
 }
 
@@ -109,9 +117,14 @@ body {
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
+  transition: all .2s ease-in;
 
   &_lg {
     font-size: 18px;
+  }
+
+  &:hover, &:focus {
+    color: #e42626;
   }
 }
 
@@ -203,7 +216,17 @@ body {
       height: 40px;
       border-radius: 5px;
       border: 1px solid #e42626;
+      color: #e42626;
       margin-right: 10px;
+      text-decoration: none;
+      transition: all .2s ease-in;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        background-color: #e42626;
+        color: #fff;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -264,7 +287,8 @@ body {
       margin-bottom: 0;
     }
 
-    &:hover .services__title {
+    &:hover .services__title,
+    &:focus .services__title {
       color: #e61010;
     }
   }
@@ -542,13 +566,15 @@ body {
       border: 2px solid transparent;
       padding: 10px;
       cursor: pointer;
+      outline: none;
 
       &_active {
         color: #e50000;
         border: 2px solid #e50000;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: #e50000;
       }
     }
@@ -557,20 +583,25 @@ body {
   &-slider {
     &-wrapper {
       position: relative;
+      height: 260px;
     }
 
     &__item {
       cursor: pointer;
+      outline: none;
 
-      &:hover .reviews-slider__title {
+      &:hover .reviews-slider__title,
+      &:focus .reviews-slider__title {
         color: #e42626;
       }
 
-      &:hover .reviews-slider__icon-wrapper {
+      &:hover .reviews-slider__icon-wrapper,
+      &:focus .reviews-slider__icon-wrapper {
         border: 3px solid #e42626
       }
 
-      &:hover .reviews-slider__icon {
+      &:hover .reviews-slider__icon,
+      &:focus .reviews-slider__icon {
         color: #e42626;
       }
     }
@@ -630,8 +661,10 @@ body {
     transition: all .2s ease-in;
     background-color: transparent;
     border: none;
+    outline: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #e42626;
     }
 
@@ -658,7 +691,8 @@ body {
     height: 170px;
     outline: none;
 
-    &:hover .partners__text {
+    &:hover .partners__text,
+    &:focus .partners__text {
       opacity: 1;
     }
   }
@@ -964,12 +998,25 @@ body {
       font-size: 17px;
       font-weight: 700;
       text-decoration: none;
+      transition: all .2s ease-in;
+      outline: none;
+
+      &:hover, &:focus {
+        color: #e42626;
+      }
     }
 
     &__email {
       color: #000000;
       font-family: 'Muller', sans-serif;
       font-size: 17px;
+      transition: all .2s ease-in;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        color: #e42626;
+      }
     }
 
     &__time {

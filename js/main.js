@@ -16,6 +16,18 @@ $(document).ready(() => {
     nextArrow: $('.reviews-slider__arrow_right')
   });
 
-  /* Reviews Tabs Filtering */
+  /* Reviews Filter */
+  $('.reviews-menu__btn').on('click', function () {
+    let filterClass = $(this).data('filter');
+    $('.reviews-menu__btn').removeClass('reviews-menu__btn_active')
+    $(this).addClass('reviews-menu__btn_active');
+    if (filterClass === '*') {
+      $('.reviews-slider').slick('slickUnfilter');
+    } else {
+      $('.reviews-slider').slick('slickUnfilter');
+      $('.reviews-slider').slick('slickFilter', filterClass);
+      $('.slick-arrow').removeClass('slick-hidden');
+    }
+  });
 
 });
