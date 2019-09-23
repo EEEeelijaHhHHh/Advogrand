@@ -1,16 +1,16 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-    .slider {
-      &-arrow {
-        &_right {
-          right: -40px;
-        }
+  .slider {
+    &-arrow {
+      &_right {
+        right: -40px;
+      }
 
-        &_left {
-          left: -40px;
-        }
+      &_left {
+        left: -40px;
       }
     }
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -101,6 +101,23 @@
   .container {
     width: 540px;
   }
+
+  .header {
+    padding: 60px 0;
+
+    &__title {
+      font-size: 38px;
+      margin-bottom: 50px;
+
+      &-small {
+        font-size: 26px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -120,5 +137,19 @@
     &__phone {
       display: none;
     }
+  }
+
+  .header {
+    &__title {
+      font-size: 26px;
+
+      &-small {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .btn {
+    width: 100%;
   }
 }
