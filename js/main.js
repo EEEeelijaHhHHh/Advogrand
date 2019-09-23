@@ -1,17 +1,28 @@
-$(document).ready(() => {
+$(document).ready(function () {
 
   /* Parners Slider */
   $('.partners').slick({
     infinite: true,
     slidesToShow: 4,
+    slidesToScroll: 2,
+    speed: 500,
     prevArrow: $('.partners__arrow_left'),
-    nextArrow: $('.partners__arrow_right')
+    nextArrow: $('.partners__arrow_right'),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
+        }
+      }
+    ]
   });
 
   /* Reviews Slider */
   $('.reviews-slider').slick({
     infinite: true,
     slidesToShow: 3,
+    speed: 300,
     prevArrow: $('.reviews-slider__arrow_left'),
     nextArrow: $('.reviews-slider__arrow_right')
   });
@@ -30,4 +41,9 @@ $(document).ready(() => {
     }
   });
 
+
+  /* Nav Menu Hamburger */
+  $('.nav-menu-hamburger').on('click', () => {
+    $('.nav-menu').toggleClass('nav-menu_active');
+  });
 });

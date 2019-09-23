@@ -54,18 +54,64 @@ body {
       color: #1c1c1c;
       font-family: "Proxima Nova", sans-serif;
       font-size: 14px;
-      font-weight: 300;
+
       text-decoration: none;
       transition: all .2s ease-in;
       outline: none;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: #e61010;
       }
     }
 
     &-hamburger {
       display: none;
+      height: 100%;
+      width: 50px;
+      position: relative;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 0;
+
+      &_active &__line {
+        background-color: transparent;
+      }
+      &_active &__line::after {
+        transform: rotate(-45deg);
+      }
+      &_active &__line::before {
+        transform: rotate(45deg);
+      }
+
+      &__line,
+      &__line::after,
+      &__line::before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 3px;
+        border-radius: 1px;
+        background-color: #e61010;
+        transition: all .2s ease-in;
+      }
+
+      &__line {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::after {
+          transform: translate(0, -7px);
+        }
+
+        &::before {
+          transform: translate(0, 7px);
+        }
+      }
+
     }
   }
 
@@ -123,7 +169,8 @@ body {
     font-size: 18px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: #e42626;
   }
 }
@@ -198,7 +245,6 @@ body {
     flex: 1;
     color: #1c1c1c;
     font-size: 14px;
-    font-weight: 300;
   }
 
   &__phone {
@@ -260,7 +306,6 @@ body {
     color: #fff;
     font-size: 24px;
     line-height: calc(32 / 24);
-    font-weight: 300;
     margin: 0 0 65px 0;
 
     &-mark {
@@ -299,7 +344,6 @@ body {
 
   &__title {
     color: #1c1c1c;
-    font-weight: 300;
     padding-left: 70px;
     line-height: calc(22 / 16);
     transition: all .4s ease-in-out;
@@ -318,7 +362,6 @@ body {
 
   &__text {
     color: #fff;
-    font-weight: 300;
     line-height: (20 / 16);
     text-align: center;
     max-width: 840px;
@@ -351,7 +394,7 @@ body {
     &__title {
       display: block;
       color: #fff;
-      font-weight: 300;
+
       line-height: (22 / 16);
       letter-spacing: 0.16px;
     }
@@ -377,7 +420,6 @@ body {
 
   &__text {
     color: #1c1c1c;
-    font-weight: 300;
     line-height: (22 / 16);
 
     &_bold {
@@ -394,7 +436,6 @@ body {
   &-table {
     color: #000;
     font-size: 13px;
-    font-weight: 300;
     text-align: center;
     border-spacing: 0;
 
@@ -465,7 +506,7 @@ body {
 
     &__text {
       color: #1c1c1c;
-      font-weight: 300;
+
       letter-spacing: 0.16px;
       padding-left: 45px;
 
@@ -505,7 +546,7 @@ body {
     &__item {
       color: #fff;
       font-family: 'Muller', sans-serif;
-      font-weight: 300;
+
       margin-bottom: 20px;
       margin-left: 30px;
 
@@ -640,7 +681,7 @@ body {
       color: #313131;
       font-family: 'Muller', sans-serif;
       font-size: 13px;
-      font-weight: 300;
+
       text-decoration: underline;
       width: 300px;
       transition: all .2s ease-in;
@@ -707,7 +748,6 @@ body {
     color: #ffffff;
     font-family: 'Muller', sans-serif;
     font-size: 12px;
-    font-weight: 300;
     line-height: (16 / 12);
     padding: 20px 15px;
     opacity: 0;
@@ -742,7 +782,7 @@ body {
     &__text {
       flex: 1;
       color: #313131;
-      font-weight: 300;
+
     }
 
     &__compare {
@@ -782,7 +822,6 @@ body {
       font-family: 'Muller', sans-serif;
       color: #000000;
       font-size: 20px;
-      font-weight: 300;
       text-align: center;
       margin: 0 0 30px 0;
 
@@ -806,7 +845,7 @@ body {
         font-family: 'Muller', sans-serif;
         color: #000000;
         font-size: 11px;
-        font-weight: 300;
+  
         height: 40px;
         width: 70%;
 
@@ -820,7 +859,7 @@ body {
         text-align: right;
         color: #000000;
         font-size: 11px;
-        font-weight: 400;
+        font-weight: 700;
         height: 40px;
       }
     }
@@ -830,7 +869,7 @@ body {
         color: #000000;
         font-family: 'Muller', sans-serif;
         font-size: 13px;
-        font-weight: 300;
+  
         margin-bottom: 15px;
       }
 
@@ -923,7 +962,7 @@ body {
       color: #000000;
       font-family: 'Muller', sans-serif;
       font-size: 14px;
-      font-weight: 300;
+
       padding-bottom: 10px;
     }
 
@@ -943,7 +982,7 @@ body {
       border-radius: 5px;
       border: 1px solid #dddddd;
       background-color: #ffffff;
-      padding: 0 5px;
+      padding: 5px 5px;
       resize: none;
       margin-bottom: 30px;
     }
@@ -959,7 +998,7 @@ body {
       color: #000000;
       font-family: 'Muller', sans-serif;
       font-size: 13px;
-      font-weight: 300;
+
       text-align: center;
     }
   }
@@ -987,7 +1026,7 @@ body {
       color: #000000;
       font-family: 'Muller', sans-serif;
       font-size: 13px;
-      font-weight: 300;
+
       margin-top: 25px;
       margin-bottom: 15px;
     }
@@ -1001,7 +1040,8 @@ body {
       transition: all .2s ease-in;
       outline: none;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: #e42626;
       }
     }
