@@ -1,5 +1,17 @@
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {}
+@media only screen and (max-width : 1200px) {
+    .slider {
+      &-arrow {
+        &_right {
+          right: -40px;
+        }
+
+        &_left {
+          left: -40px;
+        }
+      }
+    }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
@@ -72,10 +84,12 @@
 
   .about-facts {
     flex-wrap: wrap;
+
     &__item {
       flex-basis: 50%;
       margin-bottom: 50px;
     }
+
     &__number {
       margin-bottom: 0;
     }
@@ -94,5 +108,17 @@
   .container {
     padding: 0 20px;
     width: 100%;
+  }
+
+  .nav {
+    &__btn {
+      display: none;
+    }
+  }
+
+  .nav-callback {
+    &__phone {
+      display: none;
+    }
   }
 }

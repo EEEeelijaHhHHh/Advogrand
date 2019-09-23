@@ -3,16 +3,28 @@ $(document).ready(function () {
   /* Parners Slider */
   $('.partners').slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToShow: 1,
     speed: 500,
     prevArrow: $('.partners__arrow_left'),
     nextArrow: $('.partners__arrow_right'),
-    responsive: [
-      {
-        breakpoint: 1024,
+    mobileFirst: true,
+    responsive: [{
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 4,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
         }
       }
     ]
@@ -21,10 +33,24 @@ $(document).ready(function () {
   /* Reviews Slider */
   $('.reviews-slider').slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     speed: 300,
     prevArrow: $('.reviews-slider__arrow_left'),
-    nextArrow: $('.reviews-slider__arrow_right')
+    nextArrow: $('.reviews-slider__arrow_right'),
+    mobileFirst: true,
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   });
 
   /* Reviews Filter */
@@ -43,7 +69,11 @@ $(document).ready(function () {
 
 
   /* Nav Menu Hamburger */
-  $('.nav-menu-hamburger').on('click', () => {
+  $('.nav-menu-hamburger').on('click', toggleMenu);
+  $('.nav-menu__link').on('click', toggleMenu);
+
+  function toggleMenu() {
     $('.nav-menu').toggleClass('nav-menu_active');
-  });
+    $('.nav-menu-hamburger').toggleClass('nav-menu-hamburger_active');
+  }
 });
