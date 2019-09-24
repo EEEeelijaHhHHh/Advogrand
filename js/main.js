@@ -38,9 +38,8 @@ $(document).ready(function () {
     prevArrow: $('.reviews-slider__arrow_left'),
     nextArrow: $('.reviews-slider__arrow_right'),
     mobileFirst: true,
-    centerMode: true,
     responsive: [{
-        breakpoint: 1200,
+        breakpoint: 1020,
         settings: {
           slidesToShow: 3,
         }
@@ -50,7 +49,7 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 2,
         }
-      },
+      }
     ]
   });
 

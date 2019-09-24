@@ -653,7 +653,8 @@ body {
       &-wrapper {
         position: relative;
         height: 210px;
-        margin-bottom: 20px;
+        width: 300px;
+        margin: 0 auto 20px auto;
       }
     }
 
@@ -683,9 +684,9 @@ body {
       color: #313131;
       font-family: 'Muller', sans-serif;
       font-size: 13px;
-
       text-decoration: underline;
       width: 300px;
+      margin: 0 auto;
       transition: all .2s ease-in;
     }
   }
