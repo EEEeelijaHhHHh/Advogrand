@@ -3,11 +3,11 @@
   .slider {
     &-arrow {
       &_right {
-        right: -40px;
+        right: -30px;
       }
 
       &_left {
-        left: -40px;
+        left: -30px;
       }
     }
   }
@@ -25,6 +25,14 @@
     &__phone,
     &__btn {
       z-index: 1;
+    }
+
+    &__phone {
+      flex: 1;
+    }
+    
+    &__btn {
+      margin-right: 10px;
     }
 
     &-menu {
@@ -100,11 +108,11 @@
     align-items: center;
 
     &-table {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     &-users {
-      height: 250px;
+      height: 290px;
       align-self: center;
     }
   }
@@ -322,6 +330,26 @@
 
       &__info {
         padding-right: 5px;
+      }
+    }
+  }
+
+  .app {
+    &-download {
+      &__link {
+        display: block;
+        margin: 0 auto 10px auto;
+      }
+    }
+  }
+
+  .slider {
+    &-arrow {
+      &_right {
+        right: 0;
+      }
+      &_left {
+        left: 0;
       }
     }
   }
