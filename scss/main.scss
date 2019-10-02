@@ -610,6 +610,7 @@ body {
       padding: 10px;
       cursor: pointer;
       outline: none;
+      transition: all .4s;
 
       &_active {
         color: #e50000;
